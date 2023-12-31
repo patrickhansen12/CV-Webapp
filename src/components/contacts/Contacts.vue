@@ -1,0 +1,65 @@
+<template>
+    <div class="contacts-container">
+      <h2>Contact Information</h2>
+  
+      <div class="contact-item">
+        <h3>Email:</h3>
+        <p>patrickbroehansenwork@gmail.com</p>
+      </div>
+  
+      <div class="contact-item">
+        <h3>Phone:</h3>
+        <p>+45 3170 4479</p>
+      </div>
+  
+      <div class="contact-item">
+        <h3>LinkedIn:</h3>
+        <p><a href="https://www.linkedin.com/in/your-profile" target="_blank">https://www.linkedin.com/in/patrick-hansen-01460617a/</a></p>
+      </div>
+  
+      <div class="contact-item">
+        <h3>Facebook:</h3>
+        <p><a href="https://www.facebook.com/patrick.hansen.1690" target="_blank">https://www.facebook.com/patrick.hansen.1690</a></p>
+      </div>
+  
+  
+    </div>
+  </template>
+  
+  <script>
+  export default {
+  };
+  </script>
+  
+  <style scoped>
+  .contacts-container {
+    /* max-width: 600px; */
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  .contact-item {
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    color: #555;
+  }
+  
+  p {
+    color: #777;
+    line-height: 1.5;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  </style>
