@@ -1,15 +1,15 @@
 <template>
     <div class="contacts-container">
-      <h2>Contact Information</h2>
+      <h2>Kontakt informationer</h2>
   
       <div class="contact-item">
         <h3>Email:</h3>
-        <p>patrickbroehansenwork@gmail.com</p>
+        <a href = "mailto: patrickbroehansenwork@gmail.com">patrickbroehansenwork@gmail.com</a>
       </div>
   
       <div class="contact-item">
         <h3>Phone:</h3>
-        <p>+45 3170 4479</p>
+        <a href="tel:+4531704479">+45 3170 4479</a>
       </div>
   
       <div class="contact-item">
@@ -25,7 +25,7 @@
   </template>
   
   <script>
-export default {
+  export default {
     props: {
       // imageUrl: {
       //   type: String,
@@ -34,10 +34,15 @@ export default {
     },
   };
   </script>
+  
   <style scoped>
   .contacts-container {
     max-width: 600px;
     margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   h2 {
@@ -47,7 +52,12 @@ export default {
   
   .contact-item {
     margin-bottom: 20px;
-  }  
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
   h3 {
     color: #555;
   }

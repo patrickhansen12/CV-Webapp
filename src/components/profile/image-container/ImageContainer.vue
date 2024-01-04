@@ -6,12 +6,8 @@
 
 <script>
 export default {
-  props: {
-    // imageUrl: {
-    //   type: String,
-    //   required: true,
-    // },
-  },
+  
+//TODO look at store to set which picture it should set and add 3 more images that makes sense
 };
 </script>
 
