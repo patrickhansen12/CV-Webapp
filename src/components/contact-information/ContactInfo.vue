@@ -14,37 +14,40 @@
   
       <div class="contact-item">
         <h3>LinkedIn:</h3>
-        <p><a href="https://www.linkedin.com/in/your-profile" target="_blank">https://www.linkedin.com/in/patrick-hansen-01460617a/</a></p>
+        <p><a href="https://www.linkedin.com/in/patrick-hansen-01460617a/" target="_blank">linkedin.com/in/patrick-hansen</a></p>
       </div>
   
       <div class="contact-item">
         <h3>Facebook:</h3>
-        <p><a href="https://www.facebook.com/patrick.hansen.1690" target="_blank">https://www.facebook.com/patrick.hansen.1690</a></p>
+        <p><a href="https://www.facebook.com/patrick.hansen.1690" target="_blank">facebook.com/patrick.hansen.1690</a></p>
       </div>
-  
-  
     </div>
   </template>
   
   <script>
-  export default {
+export default {
+    props: {
+      // imageUrl: {
+      //   type: String,
+      //   required: true,
+      // },
+    },
   };
   </script>
-  
   <style scoped>
   .contacts-container {
-    /* max-width: 600px; */
+    max-width: 600px;
     margin: 0 auto;
   }
   
   h2 {
     color: #333;
+    text-align: center;
   }
   
   .contact-item {
     margin-bottom: 20px;
-  }
-  
+  }  
   h3 {
     color: #555;
   }

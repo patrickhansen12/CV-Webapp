@@ -1,13 +1,15 @@
 <template>
   <div>
- <CVPage/>
+    <top-bar />
+    <router-view />
   </div>
 </template>
 
 <script>
-import CVPage from './views/CVPage.vue'
+// import CVPage from './views/CVPage.vue'
+import TopBar from './components/top-bar/TopBar.vue';
 export default {
-  components: { CVPage },
+  components: { TopBar },
 }
 
 </script>
