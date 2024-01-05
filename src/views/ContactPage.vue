@@ -28,7 +28,7 @@ export default {
   }
   .contact-info {
     height: 100%;
-    min-width: 500px; 
+    // min-width: 500px; 
     margin-right:40px;
   }
 }

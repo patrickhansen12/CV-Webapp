@@ -60,7 +60,4 @@ export default {
 </script>
 
 <style lang="scss">
-.slider-button {
-  margin-bottom: 75px;
-}
 </style>

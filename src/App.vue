@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="total-view">
     <top-bar />
-    <router-view />
+    <router-view class="router-view"  />
   </div>
 </template>
 
@@ -15,5 +15,10 @@ export default {
 </script>
 
 <style>
+.total-view{
 
+}
+.router-view{
+  max-width: 100%;
+}
 </style>
