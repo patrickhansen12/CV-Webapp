@@ -18,7 +18,7 @@ export default {
 .contact-page {
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
   padding: 20px;
   background-color: #f8f8f8;
   .image-container {
@@ -28,8 +28,7 @@ export default {
   }
   .contact-info {
     height: 100%;
-    // min-width: 500px; 
-    margin-right:40px;
+    margin-left: 10px;
   }
 }
 

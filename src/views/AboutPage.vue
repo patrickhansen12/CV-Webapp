@@ -32,13 +32,13 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   background-color: #f8f8f8;
 
   .about-content {
-    max-width: 600px;
-    margin-right: 20px;
-
+  
+    margin-left: 20px;
+    margin-right: 40px;
+    place-self: flex-start;
     h2 {
       color: #333;
       font-size: 24px;
