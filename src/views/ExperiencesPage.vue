@@ -18,7 +18,7 @@
     <h3 class="skills-section frontend">
       <span class="skills-title">Frontend:</span>
       <p>
-        Kommunikation · Webdesign · Responsiv webdesign · Fejlretning · Debug · CSS · HTML · Angular (4-10) · React ·
+        Javascript - Typescript · Webdesign · Responsiv webdesign · Fejlretning · Debug · CSS · HTML · Angular (4-10) · React ·
         Vue (2, 3) · Pinia · Bootstrap
       </p>
     </h3>
