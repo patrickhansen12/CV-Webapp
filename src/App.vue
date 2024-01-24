@@ -16,7 +16,7 @@ export default {
 
 <style>
 .total-view{
-
+overflow: hidden;
 }
 .router-view{
   max-width: 100%;

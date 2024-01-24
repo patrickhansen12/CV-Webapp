@@ -2,7 +2,7 @@
   <div class="background-main" v-if="slideNumber === 1">
     <h2>Professionel Baggrund</h2>
     <p>
-      Jeg er en 27-årig mand fra Ribe, der har boet i Esbjerg i de seneste 5 år, mens jeg var under uddannelse. Jeg arbejder nu som udvikler hos Det Faglige Hus og har i størstedelen af mit liv været præget af teknologiens udvikling.
+      Jeg er en 28-årig mand fra Ribe, der har boet i Esbjerg i de seneste 5 år.  Jeg arbejder nu som udvikler hos Det Faglige Hus og har i størstedelen af mit liv været præget af teknologiens udvikling.
     </p>
 
     <h3>Kodning og Design Principper</h3>
