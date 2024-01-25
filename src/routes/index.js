@@ -12,7 +12,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory('/CV-Webapp/'), // Pass the base path to createWebHistory
+  history: createWebHistory('/CV-Webapp/#/'), // Pass the base path to createWebHistory
   routes,
 });
 

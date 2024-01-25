@@ -8,9 +8,9 @@
       <h2>Evner</h2>
       <ul>
         <li>CSS / SCSS</li>
-        <li>JavaScript (Vue.js, React,Node.js)</li>
+        <li>JavaScript og Typescript (Vue.js, React,Node.js)</li>
         <li>.net og C#</li>
-        <li>Database Management (MongoDB, MySQL)</li>
+        <li>Database Management (MongoDB, MySQL,NoSql)</li>
       </ul>
     </div>
     <div>
@@ -65,6 +65,11 @@ export default {
   .image-container {
     max-width: 100%;
     max-height: 20%;
+  }
+}
+@media (max-width: 768px) {
+  .about-page {
+    flex-direction: column;
   }
 }
 </style>

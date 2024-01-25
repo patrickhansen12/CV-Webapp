@@ -216,4 +216,9 @@ export default {
     }
   }
   }
+  @media (max-width: 768px) {
+  .experiences-page .experience {
+    flex-direction: column;
+  }
+}
 </style>

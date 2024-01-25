@@ -31,6 +31,11 @@ export default {
     margin-left: 10px;
   }
 }
+@media (max-width: 768px) {
+  .contact-page {
+    flex-direction: column;
+  }
+}
 
 
 

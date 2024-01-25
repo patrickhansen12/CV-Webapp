@@ -18,8 +18,14 @@ export default {
 <style lang="scss">
 .profile-section{
     display: flex;
-
 }
+
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+  }
+}
+
 .text-cards{
   width: 100%;
 }

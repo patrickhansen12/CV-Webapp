@@ -11,7 +11,15 @@
     </p>
 
     <h3>Faglige Kompetencer</h3>
-    <!-- Liste over faglige kompetencer -->
+    <p>
+      C#
+Java
+Python
+F#
+PHP
+Udviklingsmiljøer
+Android Studio
+Unity    </p>
 
     <h3>Seneste Projekter</h3>
     <p>
@@ -26,14 +34,14 @@
       Jeg har boet i Esbjerg i de sidste 5 år og arbejder nu som udvikler hos Det Faglige Hus. Jeg har været præget af teknologiens udvikling og har en solid erfaring inden for softwareudvikling.
     </p>
 
-    <h3>Projektledelse</h3>
+    <h3>Projekt ansvarlig</h3>
     <p>
-      Jeg har ledet flere succesfulde softwareprojekter, hvor jeg har koordineret opgaver, styret tidslinjer og sikret, at projektets mål blev opnået.
+      Jeg har haft ansvaret for adskillige vellykkede softwareprojekter, hvor jeg har koordineret opgaver, styret tidsplaner og sikret, at vi opnåede vores mål.
     </p>
 
     <h3>Arbejdsmiljø</h3>
     <p>
-      Jeg trives i et samarbejdsmiljø og er fortrolig med at arbejde i agile udviklingsteams. Jeg lægger vægt på samarbejde, åben kommunikation og konstant forbedring.
+      på arbejdet stræber jeg altid efter at være en solid holdspiller, der aktivt deltager og tilbyder min hjælp, hvor det er nødvendigt. Jeg værdsætter samarbejde, åben kommunikation og stræber efter konstant forbedring, især når det kommer til at arbejde i agile udviklingsteams."
     </p>
   </div>
 
@@ -51,7 +59,7 @@
 
     <h3>Mikrotjenester</h3>
     <p>
-      Jeg har arbejdet med mikrotjenestearkitekturer og implementeret løsninger ved hjælp af Docker og Firebase.
+      Jeg har arbejdet med mikrotjeneste arkitekturer og implementeret løsninger ved hjælp af Docker og Firebase.
     </p>
   </div>
 
@@ -77,17 +85,17 @@
   <div class="background-main" v-if="slideNumber === 5">
     <h2>Arbejdsmetoder og Værktøjer</h2>
     <p>
-      Jeg følger agile principper som Scrum og Extreme Programming og har erfaring med versionsstyring ved hjælp af GitHub og Bitbucket. Jeg har også implementeret Continuous Integration med Travis, Azure DevOps og TeamCity.
+      Jeg følger agile principper som Scrum og Extreme Programming og har erfaring med versionsstyring ved hjælp af GitHub,Bitbucket og Azure devops. Jeg har også implementeret Continuous Integration med Travis, Azure DevOps og TeamCity.
     </p>
 
     <h3>Sikkerhed og Kryptografi</h3>
     <p>
-      Jeg har implementeret sikkerhedsforanstaltninger som salting og hashing af adgangskoder, brug af Auth0 og OAuth-protokollen for at sikre applikationers sikkerhed.
+      Jeg har implementeret sikkerhedsforanstaltninger som salting og hashing af adgangskoder og gjort brug af Auth0 og OAuth-protokollen for at sikre applikationers sikkerhed.
     </p>
 
     <h3>Andre Færdigheder</h3>
     <p>
-      Udover mine kernekompetencer har jeg erfaring med parallel programmering, CUDA, JSON, smoke testing, RabbitMQ, SignalR og opsætning af DevOps-integrationer til teams og mail, især omkring pull requests.
+      Udover mine kernekompetencer har jeg erfaring med parallel programmering, CUDA, JSON, smoke testing, RabbitMQ, SignalR og opsætning af DevOps-integrationer til teams og mail med fokus på pull requests.
     </p>
   </div>
 </template>
