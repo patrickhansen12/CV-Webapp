@@ -12,13 +12,11 @@
 
     <h3>Faglige Kompetencer</h3>
     <p>
-      C#
-Java
-Python
-F#
-PHP
-Udviklingsmiljøer
-Android Studio
+      C#,
+Java,
+Python,
+F#,
+PHP,
 Unity    </p>
 
     <h3>Seneste Projekter</h3>
@@ -126,12 +124,13 @@ h2 {
 }
 
 h3 {
-  color: #555;
+  color: #5a2f2f;
 }
 
 p {
   color: #777;
   line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 /* Add more styles based on your design preferences */
