@@ -1,5 +1,6 @@
 <template>
-  <div class="experiences-page">
+<pdf-modal v-if="pdfModalVisible" :selected-pdf="selectedPdf" @close="closeModal"/>
+<div class="experiences-page">
     <div class="experience">
       <div class="info">
         <h1 class="experience-title">Erfaringer:</h1>
@@ -7,6 +8,13 @@
         <p>Det Faglige Hus · Fuldtid</p>
         <p class="duration">{{ calculateDuration() }}</p>
         <p>Esbjerg, Syddanmark</p>
+
+        <h3 class="header-pdf">Anbefalinger/Udtagelser:</h3>
+        <a class="pdf-entry" v-text="'Udtagelse Det Faglige Hus Udvikler 22.03.2021 - 31.10.2024'" @click="openModal('/CV-Webapp/pdfs/DetFagligeHus.pdf')"></a>
+        <br>
+        <a class="pdf-entry" v-text="'Anbefaling VirtualLabs Praktik 6.8.2018 - 12.10.2018 '" @click="openModal('/CV-Webapp/pdfs/Anbefaling%20praktik%20VirtualLab.pdf')"></a>
+
+
         <h3 class="skills-title">Kompetencer:</h3>
         <div>
           <div class="skills-section languages">
@@ -55,43 +63,91 @@
 
 <script>
 import ImageContainer from "@/components/profile/image-container/ImageContainer.vue";
+import PdfModal from "@/components/modals/PdfModal.vue";
 import { ref, onMounted, onUnmounted } from 'vue';
 export default {
-  components: { ImageContainer },
+  inheritAttrs: false,
+  components: { ImageContainer, PdfModal},
+  data() {
+    return {
+      pdfModalVisible: false,
+      selectedPdf: null
+    }},
   setup() {
-    const startDate = new Date('2021-03-22');
+    const startDateDFH = new Date('2021-03-22');
+    const endDateDFH = new Date('2024-10-31');
     const currentTime = ref(new Date());
+    let intervalId = null;
 
     const calculateDuration = () => {
-      const duration = currentTime.value - startDate;
-      const years = Math.floor(duration / (365 * 24 * 60 * 60 * 1000));
-      const months = Math.floor((duration % (365 * 24 * 60 * 60 * 1000)) / (30 * 24 * 60 * 60 * 1000));
-      const days = Math.floor((duration % (30 * 24 * 60 * 60 * 1000)) / (24 * 60 * 60 * 1000));
-      const hours = Math.floor((duration % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
-      const minutes = Math.floor((duration % (60 * 60 * 1000)) / (60 * 1000));
-      const seconds = Math.floor((duration % (60 * 1000)) / 1000);
+   const start = new Date(startDateDFH);
+  const end = endDateDFH || currentTime.value;  // Uses end date if defined, otherwise uses current time
 
-      return `${years} år, ${months} måneder, ${days} dage, ${hours} timer, ${minutes} minutter, ${seconds} sekunder`;
-    };
+  let years = end.getFullYear() - start.getFullYear();
+  let months = end.getMonth() - start.getMonth();
+  let days = end.getDate() - start.getDate();
+  let hours = end.getHours() - start.getHours();
+  let minutes = end.getMinutes() - start.getMinutes();
+  let seconds = end.getSeconds() - start.getSeconds();
+
+  // Adjust values if negative (e.g., if we are in a smaller month/day/hour/minute than start)
+  if (seconds < 0) {
+    seconds += 60;
+    minutes -= 1;
+  }
+  if (minutes < 0) {
+    minutes += 60;
+    hours -= 1;
+  }
+  if (hours < 0) {
+    hours += 24;
+    days -= 1;
+  }
+  if (days < 0) {
+    // Adjust days for previous month length
+    const previousMonth = new Date(end.getFullYear(), end.getMonth(), 0);
+    days += previousMonth.getDate();
+    months -= 1;
+  }
+  if (months < 0) {
+    months += 12;
+    years -= 1;
+  }
+
+  return `${years} år, ${months} måneder, ${days} dage, ${hours} timer, ${minutes} minutter, ${seconds} sekunder`;
+};
 
     const updateCurrentTime = () => {
-      currentTime.value = new Date();
+      if (!endDateDFH) currentTime.value = new Date();
     };
 
-   
     onMounted(() => {
-      updateCurrentTime();
-      setInterval(updateCurrentTime, 1000); 
+      if (!endDateDFH) {
+        updateCurrentTime();
+        intervalId = setInterval(updateCurrentTime, 1000);
+      }
     });
 
     onUnmounted(() => {
-      clearInterval(updateCurrentTime);
+      if (intervalId) clearInterval(intervalId);
     });
 
     return {
       calculateDuration,
     };
   },
+  methods:{
+    openModal(pdfPath) {
+      if (pdfPath) {
+        this.selectedPdf = pdfPath;
+        this.pdfModalVisible = true;
+      }
+    },
+    closeModal() {
+      this.pdfModalVisible = false;
+      this.selectedPdf = null;
+    }
+  }
 };
 </script>
 
@@ -113,7 +169,9 @@ export default {
     .info {
       color: #777;
       flex-grow: 1;
-
+      .header-pdf{
+  color:orangered;
+}
       .experience-title {
         font-size: 2rem;
         color: #333;
@@ -221,4 +279,14 @@ export default {
     flex-direction: column;
   }
 }
+.modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.pdf-entry{
+  cursor: pointer;
+  color: #3498db;
+}
+
 </style>
