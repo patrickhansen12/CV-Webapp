@@ -2,7 +2,7 @@
   <div class="background-main" v-if="slideNumber === 1">
     <h2>Professionel Baggrund</h2>
     <p>
-      Jeg er en 28-årig mand fra Ribe, der har boet i Esbjerg i de seneste 5 år.  Jeg arbejder nu som udvikler hos Det Faglige Hus og har i størstedelen af mit liv været præget af teknologiens udvikling.
+      Jeg er en 28-årig mand fra Ribe, der har boet i Esbjerg i de seneste mange år.  Jeg har tidligere arbejdet som udvikler hos Det Faglige Hus og har i størstedelen af mit liv været præget af teknologiens udvikling.
     </p>
 
     <h3>Kodning og Design Principper</h3>
@@ -29,7 +29,7 @@ Unity    </p>
    <div class="background-main" v-if="slideNumber === 2">
     <h2>Uddannelse og Arbejdserfaring</h2>
     <p>
-      Jeg har boet i Esbjerg i de sidste 5 år og arbejder nu som udvikler hos Det Faglige Hus. Jeg har været præget af teknologiens udvikling og har en solid erfaring inden for softwareudvikling.
+    Jeg har tidligere arbejdet som udvikler hos Det Faglige Hus, hvor jeg var udvikler i 3 år og 7 måneder.
     </p>
 
     <h3>Projekt ansvarlig</h3>
