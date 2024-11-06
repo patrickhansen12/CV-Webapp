@@ -50,6 +50,7 @@
   
     .slide-number {
       font-size: 1.2em;
+      color: aquamarine;
     }
   }
   </style>
