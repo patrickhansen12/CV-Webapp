@@ -2,7 +2,7 @@
   <div class="background-main" v-if="slideNumber === 1">
     <h2>Professionel Baggrund</h2>
     <p>
-      Jeg er en 28-årig mand fra Ribe, der har boet i Esbjerg i de seneste mange år.  Jeg har tidligere arbejdet som udvikler hos Det Faglige Hus og har i størstedelen af mit liv været præget af teknologiens udvikling.
+      Jeg er en {{age}}-årig mand fra Ribe, der har boet i Esbjerg i de seneste mange år.  Jeg har tidligere arbejdet som udvikler hos Det Faglige Hus og har i størstedelen af mit liv været præget af teknologiens udvikling.
     </p>
 
     <h3>Kodning og Design Principper</h3>
@@ -104,6 +104,7 @@ import { useSliderStore } from '../../../stores/slider';
 export default {
   computed: {
     slideNumber: () => useSliderStore().slideNumber,
+    age: () => new Date().getFullYear() - 1996,
   }
   
 };
