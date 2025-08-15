@@ -8,14 +8,14 @@ export const useSliderStore = defineStore('sliderStore', {
     actions: {
       nextSlide() {
         this.slideNumber++
-        if(this.slideNumber === 6){
+        if(this.slideNumber === 7){
             this.slideNumber = 1;
         }
       },
       prevSlide() {
         this.slideNumber--;
         if(this.slideNumber === 0){
-            this.slideNumber = 5;
+            this.slideNumber = 6;
         }
       },
     },

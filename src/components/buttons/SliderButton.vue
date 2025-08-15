@@ -1,7 +1,7 @@
 <template>
     <div class="slider-container">
       <button @click="prevSlide">&lt;</button>
-      <div class="slide-number">{{ currentSlide }} / 5</div>
+      <div class="slide-number">{{ currentSlide }} / 6</div>
       <button @click="nextSlide">&gt;</button>
     </div>
   </template>

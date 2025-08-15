@@ -96,6 +96,31 @@ Unity    </p>
       Udover mine kernekompetencer har jeg erfaring med parallel programmering, CUDA, JSON, smoke testing, RabbitMQ, SignalR og opsætning af DevOps-integrationer til teams og mail med fokus på pull requests.
     </p>
   </div>
+
+    <div class="background-main" v-if="slideNumber === 6">
+      <h2>Kontakt informationer</h2>
+  
+      <div class="contact-item">
+        <h3>Email:</h3>
+        <a href = "mailto: patrickbroehansenwork@gmail.com">patrickbroehansenwork@gmail.com</a>
+      </div>
+  
+      <div class="contact-item">
+        <h3>Phone:</h3>
+        <a href="tel:+4531704479">+45 3170 4479</a>
+      </div>
+  
+      <div class="contact-item">
+        <h3>LinkedIn:</h3>
+        <p><a href="https://www.linkedin.com/in/patrick-hansen-01460617a/" target="_blank">linkedin.com/in/patrick-hansen</a></p>
+      </div>
+  
+      <div class="contact-item">
+        <h3>Facebook:</h3>
+        <p><a href="https://www.facebook.com/patrick.hansen.1690" target="_blank">facebook.com/patrick.hansen.1690</a></p>
+      </div>
+  </div>
+  
 </template>
 
 <script>
