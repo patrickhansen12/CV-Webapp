@@ -1,6 +1,8 @@
 <template>
   <div class="contact-page">
-    <contact-info class="contact-info" />
+    <div class="contact-info">
+      <contact-info />
+    </div>
     <image-container class="image-container" />
   </div>
 </template>
@@ -10,33 +12,38 @@ import ContactInfo from "@/components/contact-information/ContactInfo.vue";
 import ImageContainer from "@/components/profile/image-container/ImageContainer.vue";
 
 export default {
-  components: { ContactInfo, ImageContainer },
+  components: { ContactInfo, ImageContainer }
 };
 </script>
 
 <style lang="scss">
 .contact-page {
   display: flex;
-  justify-content: center;
-  // align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
   padding: 20px;
   background-color: #f8f8f8;
-  .image-container {
-    max-width: 100%; 
-    margin-right: 20px;
-    max-height: 20%;
-  }
+
   .contact-info {
-    height: 100%;
-    margin-left: 10px;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  > .image-container {
+    flex: 0 0 clamp(160px, 20vw, 280px);
+    align-self: flex-start;
   }
 }
+
 @media (max-width: 768px) {
   .contact-page {
     flex-direction: column;
+
+    > .image-container {
+      width: clamp(160px, 40vw, 240px);
+      margin: 20px auto 0;
+    }
   }
 }
-
-
-
 </style>

@@ -1,28 +1,26 @@
 <template>
   <div class="image-container">
-    <img src="../../../assets/cv-billede.jpg" alt="Image" />
+    <img src="../../../assets/cv-billede.jpeg" alt="Image" />
   </div>
 </template>
 
 <script>
 export default {
-  
-//TODO look at store to set which picture it should set and add 3 more images that makes sense
 };
 </script>
 
 <style scoped>
 .image-container {
-  max-width: 100%;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+  border-radius: 12px;
 }
 
 .image-container img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
-  border-radius: 8px;
+  max-width: 240px;
+  border-radius: 12px;
+  overflow: hidden;
 }
 </style>

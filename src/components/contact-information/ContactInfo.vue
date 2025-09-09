@@ -35,7 +35,7 @@
   };
   </script>
   
-  <style scoped>
+  <style scoped lang="scss">
   .contacts-container {
     max-width: 600px;
     margin: 0 auto;
