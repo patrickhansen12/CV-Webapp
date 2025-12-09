@@ -1,7 +1,7 @@
 <template>
   <div class="pdf-modal" @click="$emit('close')">
     <div class="modal-content">
-      <iframe :src="pdfSrc" width="100%" height="600px" style="border: none;"></iframe>
+      <iframe :src="pdfSrc" width="100%" height="1200px" style="border: none;"></iframe>
     </div>
   </div>
 </template>
@@ -55,7 +55,7 @@ export default {
   background: white;
   padding: 10px;
   width: 90%; 
-  height: 80%; 
+  //height: 80%;
   max-width: 1200px;
   max-height: 95vh; 
   position: relative;
