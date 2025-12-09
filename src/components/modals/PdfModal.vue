@@ -1,7 +1,7 @@
 <template>
   <div class="pdf-modal" @click="$emit('close')">
     <div class="modal-content">
-      <iframe :src="pdfSrc" width="100%" height="1200px" style="border: none;"></iframe>
+      <iframe :src="pdfSrc" width="100%" :style="{ height: '90vh', border: 'none' }"></iframe>
     </div>
   </div>
 </template>
@@ -44,6 +44,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 10px;
   background: rgba(0, 0, 0, 0.7); /* Makes the background ligther */
   display: flex;
   justify-content: center;
@@ -52,15 +53,18 @@ export default {
 }
 
 .modal-content {
-  background: white;
-  padding: 10px;
-  width: 90%; 
-  //height: 80%;
+  width: 90%;
   max-width: 1200px;
-  max-height: 95vh; 
+  max-height: 95vh;
   position: relative;
-  overflow: hidden;
+  overflow: auto; /* tillad scroll hvis PDF er højere end modal */
 }
+.modal-content iframe {
+  width: 100%;
+  height: 95vh; /* fylder næsten hele modal */
+  border: none;
+}
+
 @media (max-width: 768px) {
   .pdf-modal {
     width: 100%;
