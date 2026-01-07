@@ -129,7 +129,19 @@ import { useSliderStore } from '../../../stores/slider';
 export default {
   computed: {
     slideNumber: () => useSliderStore().slideNumber,
-    age: () => new Date().getFullYear() - 1996,
+  age() {
+      const birthDate = new Date(1996, 0, 12); 
+      const today = new Date();
+      
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const monthDiff = today.getMonth() - birthDate.getMonth();
+      
+      if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+      }
+      
+      return age;
+    }
   }
   
 };

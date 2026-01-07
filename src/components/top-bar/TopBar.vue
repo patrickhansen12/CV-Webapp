@@ -1,6 +1,6 @@
 <template>
   <div class="top-bar">
-    <div class="title">Patricks CV</div>
+    <div class="title non-interactive">Patricks CV</div>
     <div class="menu">
       <router-link @click="setActiveSection('home')" to="/" class="menu-item">
         Forside
@@ -32,13 +32,42 @@
 </a>
     <div class="menu-item dropdown download-cv">
       Printvenlig CV
+
       <div class="dropdown-content">
-        <a href="#" @click.prevent="openModal('/CV-Webapp/pdfs/cv-danish.pdf')">Dansk CV</a>
-        <a href="#" @click.prevent="openModal('/CV-Webapp/pdfs/cv-english.pdf')">Engelsk CV</a>
+
+        <!-- Dansk -->
+        <div class="dropdown-group">
+          <div class="dropdown-title non-interactive">🇩🇰 Dansk</div>
+
+          <a href="#" @click.prevent="openModal('/CV-Webapp/pdfs/patrick-cv-danish-full.pdf')">
+            CV — fuld version
+          </a>
+
+          <a href="#" @click.prevent="openModal('/CV-Webapp/pdfs/patrick-cv-danish-short.pdf')">
+            CV — kort version
+          </a>
+        </div>
+
+        <!-- English -->
+        <div class="dropdown-group">
+          <div class="dropdown-title non-interactive">🇬🇧 English</div>
+          <a href="#" @click.prevent="openModal('/CV-Webapp/pdfs/patrick-cv-english-full.pdf')">
+            CV — full version
+          </a>
+
+          <a href="#" @click.prevent="openModal('/CV-Webapp/pdfs/patrick-cv-english-short.pdf')">
+            CV — short version
+          </a>
+        </div>
+
       </div>
     </div>
 
-    <pdf-modal v-if="pdfModalVisible" :selected-pdf="selectedPdf" @close="closeModal" />
+    <pdf-modal
+      v-if="pdfModalVisible"
+      :selected-pdf="selectedPdf"
+      @close="closeModal"
+    />
   </div>
 </template>
 
@@ -105,25 +134,63 @@ export default {
   }
 }
 
+/* Mobile-specifikke styles */
+@media (max-width: 767px) {
+  .download-cv {
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+    
+    .dropdown-content {
+      position: static;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 5px;
+      
+      a {
+        padding: 12px;
+        text-align: center;
+        background-color: #444;
+        margin-bottom: 5px;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
 @media (min-width: 768px) {
+  .download-cv {
+    margin-left: auto;
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+    }
+    
+    &:hover .dropdown-content {
+      display: flex;
+
+    }
+  }
   .top-bar {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
 
     .menu {
       flex-direction: row;
       align-items: center;
-      margin-left: 20px; 
+      margin-left: 20px;
       flex-grow: 1;
     }
 
     .menu-item {
-      margin: 0 15px 0 0; 
+      margin: 0 15px 0 0;
     }
 
     .download-cv {
-      margin-left: auto; 
+      margin-left: auto;
       margin-top: 0;
       position: relative;
     }
@@ -161,45 +228,149 @@ export default {
   .dropdown-content a:hover {
     background-color: #555;
   }
+
 }
-/* Mobile-specifikke styles */
-@media (max-width: 767px) {
+.dropdown-group {
+  padding: 6px 0;
+  border-top: 1px solid #e6e6e6;
+}
+
+.dropdown-group:first-child {
+  border-top: none;
+}
+
+.dropdown-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  padding: 4px 10px;
+}
+/* Tilføj dette til din eksisterende CSS */
+
+@media (min-width: 768px) {
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    
+    /* Vigtige ændringer her: */
+    right: 0; /* Juster til højre kant */
+    left: auto;
+    min-width: 300px; /* Fast bredde */
+    max-width: 90vw; /* Maks 90% af viewport */
+    background-color: #444;
+    border-radius: 4px;
+    z-index: 1000;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    overflow: hidden;
+  }
+
+  .dropdown-group {
+    padding: 8px 0;
+    border-top: 1px solid #555;
+  }
+
+  .dropdown-group:first-child {
+    border-top: none;
+  }
+
+  .dropdown-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    padding: 6px 12px;
+    white-space: nowrap;
+  }
+
+  .dropdown-content a {
+    color: #f2f2f2;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap; /* Forhindrer tekst i at gå på flere linjer */
+    transition: background-color 0.2s;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #555;
+  }
+  
+  /* Sørg for at dropdown ikke går ud over skærmen */
   .download-cv {
     position: relative;
-    width: 100%;
-    margin-top: 15px;
-    
-    .dropdown-content {
-      position: static;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      margin-top: 5px;
-      
-      a {
-        padding: 12px;
-        text-align: center;
-        background-color: #444;
-        margin-bottom: 5px;
-        border-radius: 4px;
-      }
-    }
+    margin-left: auto;
   }
 }
 
-/* Desktop-styles */
-@media (min-width: 768px) {
-  .download-cv {
-    margin-left: auto;
-    
-    .dropdown-content {
-      display: none;
-      position: absolute;
-    }
-    
-    &:hover .dropdown-content {
-      display: flex;
-    }
+// Mobile 
+@media (max-width: 767px) {
+  .dropdown-content {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5px;
+    background-color: #444;
+    border-radius: 4px;
+    overflow: hidden;
   }
+
+  .dropdown-group {
+    padding: 10px 0;
+    border-top: 1px solid #555;
+  }
+
+  .dropdown-group:first-child {
+    border-top: none;
+  }
+
+  .dropdown-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    padding: 8px 16px;
+  }
+
+  .dropdown-content a {
+    padding: 12px 16px;
+    text-align: left;
+    background-color: #444;
+    margin-bottom: 0;
+    border-radius: 0;
+    color: #f2f2f2;
+    text-decoration: none;
+    border-bottom: 1px solid #555;
+  }
+
+  .dropdown-content a:last-child {
+    border-bottom: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #555;
+  }
+
 }
-</style>
+.non-interactive {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  
+  /* Forhindrer at man kan trække i elementet */
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  
+  /* Forhindrer kontekstmenu (højreklik) */
+  -webkit-touch-callout: none;
+  
+  /* Forhindrer at blive markeret som tekst */
+  pointer-events: auto; /* eller 'none' hvis det skal være helt inaktivt */
+  
+  /* Ekstra for at se bedre ud */
+  cursor: default;
+}</style>
