@@ -245,7 +245,7 @@ export default {
   opacity: 0.8;
   padding: 4px 10px;
 }
-/* Tilføj dette til din eksisterende CSS */
+
 
 @media (min-width: 768px) {
   .dropdown-content {
@@ -253,11 +253,11 @@ export default {
     position: absolute;
     top: 100%;
     
-    /* Vigtige ændringer her: */
-    right: 0; /* Juster til højre kant */
+
+    right: 0; 
     left: auto;
-    min-width: 300px; /* Fast bredde */
-    max-width: 90vw; /* Maks 90% af viewport */
+    min-width: 300px; 
+    max-width: 90vw; 
     background-color: #444;
     border-radius: 4px;
     z-index: 1000;
@@ -288,7 +288,7 @@ export default {
     padding: 8px 12px;
     text-decoration: none;
     display: block;
-    white-space: nowrap; /* Forhindrer tekst i at gå på flere linjer */
+    white-space: nowrap; 
     transition: background-color 0.2s;
   }
 
@@ -296,7 +296,6 @@ export default {
     background-color: #555;
   }
   
-  /* Sørg for at dropdown ikke går ud over skærmen */
   .download-cv {
     position: relative;
     margin-left: auto;
@@ -358,19 +357,18 @@ export default {
   -moz-user-select: none;
   -ms-user-select: none;
   
-  /* Forhindrer at man kan trække i elementet */
+
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
   user-drag: none;
   
-  /* Forhindrer kontekstmenu (højreklik) */
+
   -webkit-touch-callout: none;
+
+  pointer-events: auto; 
   
-  /* Forhindrer at blive markeret som tekst */
-  pointer-events: auto; /* eller 'none' hvis det skal være helt inaktivt */
-  
-  /* Ekstra for at se bedre ud */
+
   cursor: default;
 }</style>
