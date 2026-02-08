@@ -40,6 +40,12 @@
 
         <a
           class="pdf-entry"
+          @click="openModal('/CV-Webapp/pdfs/anbefaling-af-patrick-simon-bay.pdf')"
+        >
+          Anbefaling – Fagligt samarbejde (2024)
+        </a>
+        <a
+          class="pdf-entry"
           @click="openModal('/CV-Webapp/pdfs/Anbefaling%20praktik%20VirtualLab.pdf')"
         >
           Anbefaling – VirtualLabs praktik (2018)
