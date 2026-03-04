@@ -11,6 +11,9 @@
       <router-link @click="setActiveSection('contact')" to="/kontakt" class="menu-item">
         Kontakt
       </router-link>
+      <router-link @click="setActiveSection('projects')" to="/projekter" class="menu-item">
+        Projekter
+      </router-link>
       
     </div>
 <a href="https://github.com/patrickhansen12/CV-Webapp-" 
