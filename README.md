@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/dit-badge-id/deploy-status)](https://patrick-cv.netlify.app)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/909ea762-bfc7-476b-8ddf-43b4030883df/deploy-status)](https://app.netlify.com/projects/patrick-cv/deploys)(https://patrick-cv.netlify.app)
 ![Vue 3](https://img.shields.io/badge/Vue-3-4fc08d)
 ![Pinia](https://img.shields.io/badge/state-Pinia-yellow)
 ![Vite](https://img.shields.io/badge/build-Vite-646cff)
